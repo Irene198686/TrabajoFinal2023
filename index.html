@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Corriculum vitae </title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="stylos.css">
+
+
+<body>
+    <script>
+        function traerDatos (){
+                $.ajax({
+                type:"GET",
+                URL: ' https://randomuser.me/api/ ',
+                success:function(data){
+                var res;
+                for (let item of data.resultados){
+                    res += "<tr><h4>"+item.primero.ultimo+"</h4><form>"+item.estado.país+"<form/><div class img src='"+item.imagen.medio+"></div></tr>'";
+                }
+                    $("#Cuerpo Json").empty(res);
+                    $("#Cuerpo Json").append(res);
+                },error:function(e){
+                alert("No se puede realizar");
+                } 
+            });
+            return false;
+            alert;
+
+        }
+    </script>
+
+<div class="container">
+        
+    <div class="left_side">
+        <div class="profile">
+         <div class="img_setting">
+            <img src="https://randomuser.me/api/portraits/men/59.jpg" alt="" srcset="">
+            </div>
+             <h4>
+                <form id="datos" method="post">
+                    <label for="txt_nombre" class="form-label">Nombre</label>
+                </form>
+             </h4>
+             <h5>
+                <form id="datos" method="post">
+                    <label for="txt_direccion" class="form-label">Direccion</label>
+                </form>
+             </h5>
+             <Button class="btn">Descarga PDF</Button.btn>
+        </div>
+
+        <div class="left_items">
+            <h4><class="title">Contacto</h4>
+            <ul>
+                <li>
+                    <Span class="icons"></Span>
+                        <i class=" bx bx-map"></i>
+                </span>
+                    <span class="text"><www.hfjfjfjf.com></span>
+                </li>
+                <li>
+                    <span class="icons"></span>
+                    <i class=" bx bx-envelope"></i>
+                </span>
+                    <span class="text"> contacto@jfhfhfhf.com</span>
+                </li>
+                <li>
+                    <span class="icons"></span>
+                    <i class=" bx bx-phone"></i>
+                </span>
+                    <span class="text">+ 011 3582 405243</span>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="left_items">
+            <h4 class="title"> Formacion Academica</h4>
+            <ul>
+                <li>
+                    <h5 class="dates"> 52522342</h5>
+                    <h4 class="text"> sdfjsdkfjdkf</h4>
+                    <h4 class="text"> Nombre de la institucion</h4>
+                </li>
+            </ul>
+        </div>
+
+        <div class="left_items">
+            <h4 class="title">Pos Titulos</h4>
+                <ul>
+                    <h5 class="dates"> Febrero, 2022</h5>
+                    <h4 class="text"> programacion TXT</h4>
+                    <h4 class="text"> Programa 4.0</h4>
+                </ul>
+
+        </div>
+
+        <div class="left_items">
+            <h4 class="title">Idioma</h4>
+            <ul class="idioma">
+                <li>
+                    <span class="text">Ingles</span>
+                    <div class="percent">
+                        <div style="width: 90%"></div>
+                    </div>
+                </li>
+             </ul>       
+        </div>
+        <tbody id="Cuerpo Json">
+
+            </tbody>
+
+    <div class="right_side">djfkdjfkdjfkd</div>
+
+    </div> 
+</div>   
+</body>
+</html>
